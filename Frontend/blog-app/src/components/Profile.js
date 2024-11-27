@@ -85,7 +85,7 @@ function Profile() {
         return;
       }
 
-      const response = await axios.get("https://blogapplication-29oz.onrender.com//api/all-blogs", {
+      const response = await axios.get("https://blogapplication-29oz.onrender.com/api/all-blogs", {
         headers: {
           Authorization: `Bearer ${token}`,
         },

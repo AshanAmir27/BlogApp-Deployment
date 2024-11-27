@@ -12,7 +12,7 @@ function Home() {
   useEffect(() => {
     const fetchBlogs = async () => {
       try {
-        const response = await axios.get("https://blogapplication-29oz.onrender.com//api/blogs"); // API call to fetch blogs
+        const response = await axios.get("https://blogapplication-29oz.onrender.com/api/blogs"); // API call to fetch blogs
         // Assuming response.data.blogs contains the array of blogs
         if (Array.isArray(response.data.blogs)) {
           setBlogs(response.data.blogs); // Set the blogs if it's an array

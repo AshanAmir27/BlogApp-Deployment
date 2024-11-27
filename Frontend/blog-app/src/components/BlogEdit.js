@@ -8,7 +8,7 @@ function BlogEdit({ blogId }) {
   useEffect(() => {
     const fetchBlog = async () => {
       try {
-        const response = await axios.get(`https://blogapplication-29oz.onrender.com//api/blogs/${blogId}`);
+        const response = await axios.get(`https://blogapplication-29oz.onrender.com/api/blogs/${blogId}`);
         setBlog(response.data);
       } catch (error) {
         console.error("Error fetching blog:", error);
@@ -25,7 +25,7 @@ function BlogEdit({ blogId }) {
     setLoading(true);
 
     try {
-      await axios.put(`https://blogapplication-29oz.onrender.com//api/blogs/${blogId}`, blog);
+      await axios.put(`https://blogapplication-29oz.onrender.com/api/blogs/${blogId}`, blog);
       alert("Blog updated successfully");
     } catch (error) {
       console.error("Error updating blog:", error);

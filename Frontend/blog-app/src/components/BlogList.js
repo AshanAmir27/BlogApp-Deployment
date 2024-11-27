@@ -75,7 +75,7 @@ function BlogList() {
     try {
       // Send the data as JSON
       await axios.put(
-        `http://localhost:4000/api/update-blog/${selectedBlog._id}`,
+        `https://blogapplication-29oz.onrender.com/api/update-blog/${selectedBlog._id}`,
         updatedBlog, // Send as JSON
         { headers: { "Content-Type": "application/json" } }
       );

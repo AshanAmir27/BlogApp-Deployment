@@ -28,7 +28,7 @@ function Blog() {
   const handleCreate = async () => {
     try {
       const response = await axios.post(
-        "http://localhost:4000/api/blogs/create",
+        "https://blogapplication-29oz.onrender.com/api/blogs/create",
         { title, subTitle, content },
         { headers: { Authorization: `Bearer ${localStorage.getItem("token")}` } }
       );
@@ -40,7 +40,7 @@ function Blog() {
 
   const handleDelete = async (id) => {
     try {
-      await axios.delete(`http://localhost:4000/api/blogs/delete/${id}`, {
+      await axios.delete(`https://blogapplication-29oz.onrender.com/api/blogs/delete/${id}`, {
         headers: { Authorization: `Bearer ${localStorage.getItem("token")}` },
       });
       setBlogs(blogs.filter((blog) => blog._id !== id));

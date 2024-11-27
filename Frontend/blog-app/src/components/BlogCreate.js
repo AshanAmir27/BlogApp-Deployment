@@ -23,7 +23,7 @@ function BlogCreate() {
 
     try {
       const response = await axios.post(
-        "http://localhost:4000/api/create-blog",
+        "https://blogapplication-29oz.onrender.com//api/create-blog",
         blogData,
         {
           headers: {

@@ -85,7 +85,7 @@ function Profile() {
         return;
       }
 
-      const response = await axios.get("http://localhost:4000/api/all-blogs", {
+      const response = await axios.get("https://blogapplication-29oz.onrender.com//api/all-blogs", {
         headers: {
           Authorization: `Bearer ${token}`,
         },
@@ -113,7 +113,7 @@ function Profile() {
     try {
       const token = localStorage.getItem("token");
       await axios.post(
-        "http://localhost:4000/api/blog-create", // Adjust endpoint as necessary
+        "https://blogapplication-29oz.onrender.com/api/blog-create", // Adjust endpoint as necessary
         formValues,
         {
           headers: {
@@ -159,7 +159,7 @@ function Profile() {
     try {
       const token = localStorage.getItem("token");
       await axios.put(
-        `http://localhost:3000/blog/${editingBlog._id}`,
+        `https://blogapplication-29oz.onrender.com/blog/${editingBlog._id}`,
         formValues,
         {
           headers: {
@@ -183,7 +183,7 @@ function Profile() {
   const handleDelete = async (blogId) => {
     try {
       const token = localStorage.getItem("token");
-      await axios.delete(`http://localhost:3000/blog/${blogId}`, {
+      await axios.delete(`https://blogapplication-29oz.onrender.com/blog/${blogId}`, {
         headers: {
           Authorization: `Bearer ${token}`,
         },

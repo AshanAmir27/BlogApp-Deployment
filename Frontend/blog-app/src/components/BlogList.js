@@ -19,7 +19,7 @@ function BlogList() {
   useEffect(() => {
     const fetchBlogs = async () => {
       try {
-        const response = await axios.get("http://localhost:4000/api/blogs");
+        const response = await axios.get("https://blogapplication-29oz.onrender.com//api/blogs");
         setBlogs(response.data.blogs); // Assuming response.data is an array
       } catch (error) {
         console.error("Error fetching blogs", error);
@@ -38,7 +38,7 @@ function BlogList() {
         "Are you sure you want to delete this blog?"
       );
       if (confirmation) {
-        await axios.delete(`http://localhost:4000/api/delete-blog/${id}`);
+        await axios.delete(`https://blogapplication-29oz.onrender.com//api/delete-blog/${id}`);
         setBlogs(blogs.filter((blog) => blog._id !== id)); // Remove the deleted blog from the state
         alert("Blog deleted successfully");
       }

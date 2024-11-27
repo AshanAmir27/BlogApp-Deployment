@@ -37,7 +37,7 @@ function Signup() {
     // Send data to the backend
     try {
       // Updated API endpoint to match your backend route
-      const response = await axios.post("http://localhost:4000/api/auth/signup", {
+      const response = await axios.post("https://blogapplication-29oz.onrender.com/api/auth/signup", {
         username: formData.username,
         email: formData.email,
         password: formData.password,

@@ -50,7 +50,7 @@ function Login() {
 
     try {
       const response = await axios.post(
-        "https://blogapplication-29oz.onrender.com//api/admin/login",
+        "https://blogapplication-29oz.onrender.com/api/admin/login",
         {
           username: formData.username,
           password: formData.password,
